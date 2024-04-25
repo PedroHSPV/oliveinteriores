@@ -9,12 +9,15 @@
 
 #93acb4 
 */
+/* Estilos para o corpo da página */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #2d6464;
 }
+
+/* Estilos para o cabeçalho */
 header {
     background-color: #2d6464;
     color: #fff;
@@ -23,46 +26,63 @@ header {
     font-size: 30px;
 }
 
-header a:hover{
-    background-color:#789495;
+header a:hover {
+    background-color: #789495;
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
 }
 
-header nav a:hover{
-    background-color:#789495;
+/* Estilos para a navegação do cabeçalho */
+header nav a:hover {
+    background-color: #789495;
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
 }
 
+/* Estilos para os contêineres */
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
 }
 
+/* Estilos para os links */
 a {
     text-decoration: none; /* Remove o sublinhado dos links */
+    font-family: 'Courier New', Courier, monospace;
 }
 
-p{
-    color:#000000;
+/* Estilos para parágrafos */
+p {
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-h2{
-    color:#e2eced;
+/* Estilos para cabeçalhos secundários */
+h2 {
+    color:#ecf0f1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
 }
 
+h3{
+    color:#2d6464;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+/* Estilos para o logotipo */
 .logo-container img {
-    width: 1280px; /* Defina a largura desejada */
+    width: 1180px; /* Defina a largura desejada */
     height: auto; /* Mantenha a proporção da imagem */
     border-radius: 60px;
 }
 
-.logo-container img:hover{
-    background-color:#789495;
+.logo-container img:hover {
+    background-color: #789495;
     transform: scale(1.01); /* Aumenta o tamanho em 5% quando o mouse passa sobre o projeto */
     transition: transform 0.5s ease; /* Adiciona uma transição suave */
 }
 
+/* Estilos para a seção do perfil */
 .profile-container {
     display: flex;
     align-items: center;
@@ -75,6 +95,7 @@ h2{
     height: 300px;
     margin-right: 20px;
 }
+
 .profile-image img {
     width: 100%;
     height: 100%;
@@ -82,21 +103,20 @@ h2{
     border-radius: 60px; /* Adiciona borda arredondada */
 }
 
-.profile-image img:hover{
-    background-color:#789495;
+.profile-image img:hover {
+    background-color: #789495;
     transform: scale(1.50); /* Aumenta o tamanho em 5% quando o mouse passa sobre o projeto */
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
 }
 
 .profile-text {
     flex: 1;
-    background-color: #e2eced;
+    background-color: #92b4b4;
     padding: 20px;
     border-radius: 60px;
 }
 
 .profile-text:hover {
-
     transform: scale(1.30); /* Aumenta o tamanho em 5% quando o mouse passa sobre o projeto */
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
 }
@@ -105,14 +125,16 @@ h2{
     margin: 0; /* Remove a margem padrão do parágrafo */
 } 
 
+/* Estilos para os projetos */
 .project {
-    background-color: #e2eced;
+    background-color: #92b4b4;
     margin-bottom: 30px;
     overflow: hidden;
     border-radius: 120px;
 }
-.project:hover{
-    background-color:#789495;
+
+.project:hover {
+    background-color:#92b4b4;
     transform: scale(1.05); /* Aumenta o tamanho em 5% quando o mouse passa sobre o projeto */
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
 }
@@ -141,30 +163,34 @@ h2{
     max-width: 100%;
     height: auto;
 }
-/* Estilo para os links do header */
+
+/* Estilos para a navegação */
 nav {
     text-align: center;
     background-color: #2d6464;
     padding: 10px 0;
 }
+
 nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
 }
+
 nav a:hover {
     text-decoration: underline;
 }
-/* Estilo para centralizar a imagem do logo */
+
+/* Estilos para centralizar o logotipo */
 .logo-container {
     text-align: center;
     margin-bottom: 20px;
 }
 
-footer{
-    background-color: #789495;
-    color:#ecf0f1;
+/* Estilos para o rodapé */
+footer {
+    background-color: #92b4b4;
+    color: #ecf0f1;
     padding: 60px 0;
     text-align: center;
 }
-
