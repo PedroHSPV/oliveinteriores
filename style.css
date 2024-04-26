@@ -145,6 +145,12 @@ h3{
     align-items: center;
 }
 
+.contact-container:hover {
+    background-color:#2d6464;
+    transform: scale(1.50); /* Aumenta o tamanho em 5% quando o mouse passa sobre o projeto */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
 .project-image {
     flex: 1;
     width: 200px;
@@ -154,6 +160,7 @@ h3{
 .project-text {
     flex: 2;
     padding: 20px;
+    text-align: justify ;
 }
 
 .project-text h3 {
@@ -178,9 +185,6 @@ nav a {
     margin: 0 10px;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
 
 /* Estilos para centralizar o logotipo */
 .logo-container {
@@ -199,22 +203,10 @@ nav a:hover {
 
 /* Estilos para o rodapé */
 footer {
-    background-color: #92b4b4;
+    background-color:#2d6464;
     color: #ecf0f1;
     padding: 60px 0;
     text-align: center;
 }
 
-/* Estilos para telas menores */
-@media only screen and (max-width: 600px) {
-    .logo-container img {
-        width: 100%; /* Define a largura como 100% para ocupar toda a largura da tela */
-    }
-}
 
-/* Estilos para telas maiores */
-@media only screen and (min-width: 601px) {
-    .logo-container img {
-        width: 50%; /* Define a largura como 50% para ocupar metade da largura da tela */
-    }
-}
