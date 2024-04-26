@@ -24,13 +24,11 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #2d6464;
-    background-color: #000101;
+    background-color: #333;
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    z-index: 1000;
-    padding-top: 1px;
+    z-index: 1000; /* Ajuste o valor conforme necessário */
 }
 
 header a:hover {
@@ -49,6 +47,7 @@ header nav a:hover {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
+    padding-top: 100px;
 }
 
 /* Estilos para os links */
@@ -72,7 +71,7 @@ h2 {
 }
 
 h3{
-    color:#2d6464;
+    color: #000101;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -171,7 +170,7 @@ h3{
 
 .project-text {
     flex: 1;
-    padding: 20px;
+    padding: 30px;
     text-align: justify;
 }
 
@@ -189,6 +188,7 @@ nav {
     text-align: center;
     background-color: #2d6464;
     padding: 10px 0;
+    margin-bottom: 2px;
 }
 
 nav a {
@@ -206,6 +206,7 @@ nav a {
 .logo-container {
     text-align: center;
     margin-bottom: 200px;
+    padding-top: 100px;
 }
 
 #logo {
@@ -237,4 +238,46 @@ footer {
 .social-logos img{
     width: 20px;
     height: 20px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    /* Ajuste os estilos para telas menores */
+
+    .logo-container img {
+        max-width: 200px;
+    }
+    
+    .project {
+        padding: px;
+        max-width: 7600px;
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project-text {
+        max-width: 7600px;
+    }
+    
+    .project-text h3 {
+        max-width: 7600px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Estilos adicionais para dispositivos móveis */
+    .logo-container img {
+        max-width: 150px;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+@media (max-width: 768px) {
+
 }

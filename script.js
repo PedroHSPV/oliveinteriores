@@ -7,4 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Isso adiciona um efeito de fade-in ao elemento, controlado pelas regras CSS da classe "fade-in"
     logo.classList.add("fade-in");
 });
+// JavaScript para exibir/ocultar os links ao clicar no ícone do menu
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
 
