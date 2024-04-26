@@ -4,8 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-container img {
+    width: 100%;
+    display: none;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color:#2d6464;;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel button.prev {
+    left: 10px;
+    color:#2d6464;
+}
+
+.carousel button.next {
+    right: 10px;
+    color:#2d6464;
+}
+
+.logo {
+    width: 150px; /* Defina o tamanho desejado para a largura */
+    height: auto; /* Altura automática para manter a proporção */
+}
+
+    </style>
+
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <!-- Adicione um link para levar diretamente ao primeiro projeto -->
+            <a href="/index.html"><img class="logo" src="Imagens/Logo.jpeg" alt="Logo"></a>
+            <a href="#projeto1">Projetos</a>
+            <a href="#arquiteta">Arquiteta</a>
+            <a href="#contato">Contato</a>
+            <a href="#orcamento">Orçamento</a>
+        </nav>
+    </header>
+
+    <h2>Projeto</h2>
+
+    <div class="carousel">
+        <div class="carousel-container">
+            <img src="/Imagens/projeto 1.png" alt="Projeto 1">
+            <img src="/Imagens/Logo.jpeg" alt="Projeto 2">
+            <!-- Adicione mais imagens conforme necessário -->
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <div class="project-text">
+        <h3>Título do Projeto 1</h3>
+        <p>Esta casa moderna foi projetada com um estilo minimalista, destacando linhas limpas e espaços abertos. Localizada em uma área tranquila nos arredores da cidade, a residência oferece uma combinação harmoniosa entre design contemporâneo e funcionalidade. O projeto inclui características como grandes janelas que permitem a entrada abundante de luz natural, um layout aberto que facilita a circulação e integração dos espaços, e materiais de alta qualidade que garantem durabilidade e estética sofisticada. A área externa foi cuidadosamente planejada para proporcionar um ambiente relaxante e acolhedor, com um jardim paisagístico e uma piscina de borda infinita que oferece vistas deslumbrantes da paisagem circundante.</p>
+    </div>
+    <script>
+        let slideIndex = 0;
+
+        function changeSlide(n) {
+            const slides = document.querySelectorAll('.carousel-container img');
+            slideIndex += n;
+
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+
+            slides[slideIndex].style.display = 'block';
+        }
+
+        // Exibir o primeiro slide ao carregar a página
+        changeSlide(0);
+    </script>
 </body>
 </html>
