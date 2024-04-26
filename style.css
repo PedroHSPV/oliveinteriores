@@ -9,35 +9,42 @@
 
 #93acb4 
 */
+
 /* Estilos para o corpo da página */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top: 80px; /* Altura */
     background-color: #2d6464;
 }
 
 /* Estilos para o cabeçalho */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #2d6464;
+    background-color: #000101;
     color: #fff;
-    padding: 20px;
+    padding: 10px 0;
     text-align: center;
-    font-size: 30px;
+    z-index: 1000;
+    padding-top: 1px;
 }
 
 header a:hover {
-    background-color: #789495;
-    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    background-color: #000101;
+    transition: transform 0.3s ease; 
 }
 
 /* Estilos para a navegação do cabeçalho */
 header nav a:hover {
     background-color: #789495;
-    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    transition: transform 0.3s ease; 
 }
 
-/* Estilos para os contêineres */
+/* Estilos para os containers */
 .container {
     max-width: 800px;
     margin: 20px auto;
@@ -56,37 +63,37 @@ p {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Estilos para cabeçalhos secundários */
+/* Estilos para h2 e h3 */
 h2 {
     color:#ecf0f1;
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
-    text-align: center;
+    text-align:center;
 }
 
 h3{
     color:#2d6464;
     font-family: 'Courier New', Courier, monospace;
-
 }
 
 /* Estilos para o logotipo */
 .logo-container img {
-    width: 1180px; /* Defina a largura desejada */
-    height: auto; /* Mantenha a proporção da imagem */
+    width: 1180px; 
+    height: auto; /*  proporção  */
     border-radius: 60px;
 }
 
 .logo-container img:hover {
     background-color: #789495;
-    transform: scale(1.01); /* Aumenta o tamanho em 5% quando o mouse passa sobre o projeto */
-    transition: transform 0.5s ease; /* Adiciona uma transição suave */
+    transform: scale(1.01); 
+    transition: transform 0.5s ease; 
 }
 
 /* Estilos para a seção do perfil */
 .profile-container {
     display: flex;
     align-items: center;
+    margin-bottom: 200px;
 }
 
 .profile-image {
@@ -101,13 +108,13 @@ h3{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 60px; /* Adiciona borda arredondada */
+    border-radius: 60px; /* borda arredondada */
 }
 
 .profile-image img:hover {
     background-color: #789495;
-    transform: scale(1.50); /* Aumenta o tamanho em 5% quando o mouse passa sobre o projeto */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    transform: scale(1.50); 
+    transition: transform 0.3s ease; 
 }
 
 .profile-text {
@@ -118,8 +125,8 @@ h3{
 }
 
 .profile-text:hover {
-    transform: scale(1.10); /* Aumenta o tamanho em 5% quando o mouse passa sobre o projeto */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    transform: scale(1.10); 
+    transition: transform 0.3s ease; 
 }
 
 .profile-text p {
@@ -129,15 +136,20 @@ h3{
 /* Estilos para os projetos */
 .project {
     background-color: #92b4b4;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     overflow: hidden;
-    border-radius: 80px;
+    border-radius: 40px;
+    height: auto; /*  altura automática do conteúdo interno */
+    max-width: 1200px; /* Define a largura máxima do projeto */
+    margin: 0 auto; /* Centraliza o projeto na página */
+    padding: 0 20px; /* Adiciona margem nas laterais */
+    margin-bottom: 200px;
 }
 
 .project:hover {
     background-color:#92b4b4;
-    transform: scale(1.05); /* Aumenta o tamanho em 5% quando o mouse passa sobre o projeto */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    transform: scale(1.05); 
+    transition: transform 0.3s ease; 
 }
 
 .project-content {
@@ -147,20 +159,20 @@ h3{
 
 .contact-container:hover {
     background-color:#2d6464;
-    transform: scale(1.50); /* Aumenta o tamanho em 5% quando o mouse passa sobre o projeto */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    transform: scale(1.50); 
+    transition: transform 0.3s ease; 
 }
 
 .project-image {
     flex: 1;
-    width: 200px;
-    height: 250px;
+    width: 250px; 
+    height: auto;
 }
 
 .project-text {
-    flex: 2;
+    flex: 1;
     padding: 20px;
-    text-align: justify ;
+    text-align: justify;
 }
 
 .project-text h3 {
@@ -187,13 +199,13 @@ nav a {
 
 .container{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 200px;
 }
 
 /* Estilos para centralizar o logotipo */
 .logo-container {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 200px;
 }
 
 #logo {
@@ -201,6 +213,10 @@ nav a {
     transition: opacity 2s ease-in-out;
 }
 
+.logo {
+    width: 150px; 
+    height: auto; 
+}
 #logo.fade-in {
     opacity: 1;
 }
@@ -213,4 +229,12 @@ footer {
     text-align:initial ;
 }
 
+.contact-image img {
+    width: 100%;
+    display: none;
+}
 
+.social-logos img{
+    width: 20px;
+    height: 20px;
+}
