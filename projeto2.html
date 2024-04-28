@@ -92,27 +92,26 @@
         <p>Esta casa moderna foi projetada com um estilo minimalista, destacando linhas limpas e espaços abertos. Localizada em uma área tranquila nos arredores da cidade, a residência oferece uma combinação harmoniosa entre design contemporâneo e funcionalidade. O projeto inclui características como grandes janelas que permitem a entrada abundante de luz natural, um layout aberto que facilita a circulação e integração dos espaços, e materiais de alta qualidade que garantem durabilidade e estética sofisticada. A área externa foi cuidadosamente planejada para proporcionar um ambiente relaxante e acolhedor, com um jardim paisagístico e uma piscina de borda infinita que oferece vistas deslumbrantes da paisagem circundante.</p>
     </div>
     <script>
-        let slideIndex = 0;
+        let currentSlide = 0;
+const slides = document.querySelectorAll('.magensmenu-container img');
+const totalSlides = slides.length;
 
-        function changeSlide(n) {
-            const slides = document.querySelectorAll('.carousel-container img');
-            slideIndex += n;
+function showSlide(n) {
+    slides[currentSlide].style.display = 'none';
+    currentSlide = (n + totalSlides) % totalSlides;
+    slides[currentSlide].style.display = 'inline-block';
+}
 
-            if (slideIndex >= slides.length) {
-                slideIndex = 0;
-            } else if (slideIndex < 0) {
-                slideIndex = slides.length - 1;
-            }
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
 
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
-            }
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
 
-            slides[slideIndex].style.display = 'block';
-        }
+showSlide(currentSlide);
 
-        // Exibir o primeiro slide ao carregar a página
-        changeSlide(0);
     </script>
 </body>
 </html>

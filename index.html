@@ -6,29 +6,34 @@
     <title>Olive Interiores</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-        <header>
-            <nav>
-                <!-- Links de navegação -->
-                <div class="nav-links">
-                    <a href="/index.html"><img class="logo" src="/Imagens/OLIVE-oficial-tranparente-verde.png" alt="Logo"></a>
-                    <a href="#projeto1">PROJETOS</a>
-                    <a href="#arquiteta">ARQUITETA</a>
-                    <a href="#contato">CONTATO</a>
-                    <a href="/orçamento.html">ORÇAMENTO</a>
-            </nav>
-        </header>
-        
-        <div class="logo-container" id="logo">
+    <header>
+        <nav>
+            <!-- Links de navegação -->
+            <div class="nav-links">
+                <a href="/index.html"><img class="logo" src="/Imagens/OLIVE-oficial-tranparente-verde.png" alt="Logo"></a>
+                <a href="#projeto1">PROJETOS</a>
+                <a href="#arquiteta">ARQUITETA</a>
+                <a href="#contato">CONTATO</a>
+                <a href="/orçamento.html">ORÇAMENTO</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-container">
             <img src="/Imagens/8.png" alt="Logo da Empresa">
             <img src="/Imagens/1.png" alt="Logo da Empresa">
             <img src="/Imagens/3.png" alt="Logo da Empresa">
         </div>
-        
-        <h2>Projetos</h2>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <h2>Projetos</h2>
     <div class="project">
         <h2>Studio Toth</h2>
         <a href="projeto1.html" id="projeto1">
@@ -49,8 +54,6 @@
             </div>
         </a>
     </div>
-    </div>
-    <!-- Adicione os outros projetos conforme necessário -->
 
     <div id="arquiteta" class="container">
         <h2>Arquiteta</h2>
@@ -71,19 +74,19 @@
             </div>
         </div>
     </div>
-        <div id="contato" class="container">
-            <h2>Contato</h2>
-            <div class="contact-container">
-                <div class="contact-image">
-                    <img src="/Imagens/Logo verde.jpeg" alt="Foto da Arquiteta">
 
-                </div>
-                <div class="contact-text">
-                    <p>Yasmin Oliveira Souza<br>
-                        E-mail: yasminoliveirasouza1313@gmail.com<br>
-                        Telefone: 11 96544-2561</p>
-                </div>
+    <div id="contato" class="container">
+        <h2>Contato</h2>
+        <div class="contact-container">
+            <div class="contact-image">
+                <img src="/Imagens/Logo verde.jpeg" alt="Foto da Arquiteta">
             </div>
+            <div class="contact-text">
+                <p>Yasmin Oliveira Souza<br>
+                    E-mail: yasminoliveirasouza1313@gmail.com<br>
+                    Telefone: 11 96544-2561</p>
+            </div>
+        </div>
         <div class="social-logos">
             <a href="https://www.instagram.com/olive_interiores/" target="_blank">
                 <img src="/Imagens/87390.png" alt="Instagram">
@@ -92,15 +95,37 @@
                 <img src="/Imagens/whats.png" alt="Whatsapp">
             </a>
         </div>
-
     </div>
+
     <footer>
         <p> Site criado por Pedro Vilela<br>
             Contato: pedrohspv@gmail.com
         </p>
-        
     </footer>
 
-    <script src="./script.js"></script>
+    <script>
+        let slideIndex = 0;
+
+        function changeSlide(n) {
+            const slides = document.querySelectorAll('.carousel-container img');
+            slideIndex += n;
+
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+
+            slides[slideIndex].style.display = 'block';
+        }
+
+        // Exibir o primeiro slide ao carregar a página
+        changeSlide(0);
+    </script>
 </body>
 </html>
+

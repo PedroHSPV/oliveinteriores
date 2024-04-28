@@ -75,7 +75,6 @@ h3{
     object-fit: contain;
 }
 
-
 /* Estilos para a seção do perfil */
 .profile-container {
     display: flex;
@@ -234,11 +233,11 @@ footer {
     }
 
     .project-text {
-        max-width: 7600px;
+        max-width: 760px;
     }
     
     .project-text h3 {
-        max-width: 7600px;
+        max-width: 7600x;
     }
 }
 
@@ -253,5 +252,49 @@ footer {
         height: 120px;
     }
 }
+
+/* Aqui estão os estilos adicionais que você forneceu */
+/* Adicione-os abaixo dos estilos existentes */
+
+/* Adicione aqui o CSS fornecido */
+
+.carousel {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; /* Garante que o carousel-container ocupe todo o width do carousel */
+}
+
+.carousel-container img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do carousel */
+    height: auto; /* Permite que a altura seja ajustada automaticamente para manter a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço do contêiner mantendo a proporção */
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel button.prev {
+    left: 10px;
+}
+
+.carousel button.next {
+    right: 10px;
+}
+
 
 
