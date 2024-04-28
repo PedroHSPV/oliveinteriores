@@ -46,7 +46,7 @@ header nav a:hover {
 /* Estilos para os links */
 a {
     text-decoration: none; /* Remove o sublinhado dos links */
-    font-family:;
+    font-family:'Montserrat', sans-serif
 }
 
 /* Estilos para parágrafos */
@@ -70,18 +70,11 @@ h3{
 
 /* Estilos para o logotipo */
 .logo-container img {
-    width: 480px; 
-    height: 480px; /*  proporção  */
-    border-radius: 60px;
-    position:relative;
-    top: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.logo-container img:hover {
-    background-color: #789495;
-    transform: scale(1.30); 
-    transition: transform 0.5s ease; 
-}
 
 /* Estilos para a seção do perfil */
 .profile-container {
@@ -186,9 +179,9 @@ nav a {
 
 /* Estilos para centralizar o logotipo */
 .logo-container {
-    text-align: center;
-    margin-bottom: 200px;
-    padding-top: 100px;
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
 }
 
 #logo {
