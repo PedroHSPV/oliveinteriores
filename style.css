@@ -123,11 +123,10 @@ h3{
 .project {
     overflow: hidden;
     border-radius: 40px;
-    max-width: 550px; /* Define a largura máxima do projeto */
-    margin: 0 auto; /* Centraliza o projeto na página */
-    padding: 0 20px; /* Adiciona margem nas laterais */
-    margin-bottom: 100px; /* Adiciona margem inferior */
-    border-radius: 15%;
+    width: 45%; /* Ajuste o tamanho para ocupar quase metade do espaço disponível, com margens */
+    margin: 2.5%; /* Adiciona margens entre os projetos */
+    float: left; /* Faz com que os projetos flutuem para a esquerda */
+    box-sizing: border-box; /* Inclui as bordas e o padding no cálculo do tamanho */
 }
 
 .project:hover {
@@ -199,7 +198,7 @@ nav a {
 /* Estilos para o rodapé */
 footer {
     background-color:#000101;
-    color:#2d6464;
+    color:#e2eced;
     padding: 20px 0;
     text-align:initial ;
 }
@@ -210,8 +209,8 @@ footer {
 }
 
 .social-logos img{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 /* Media Queries para Responsividade */
@@ -269,6 +268,7 @@ footer {
     display: flex;
     transition: transform 0.5s ease;
     width: 100%; /* Garante que o carousel-container ocupe todo o width do carousel */
+    margin-bottom: 300px; /* Adiciona margem inferior */
 }
 
 .carousel-container img {
