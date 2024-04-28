@@ -12,10 +12,10 @@
 
 /* Estilos para o corpo da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding-top: 80px; /* Altura */
-    background-color: #2d6464;
+    background-color: #e2eced;
 }
 
 /* Estilos para o cabeçalho */
@@ -24,22 +24,15 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
     color: #fff;
     padding: 10px 0;
     text-align: center;
     z-index: 1000; /* Ajuste o valor conforme necessário */
 }
 
-header a:hover {
-    background-color: #000101;
-    transition: transform 0.3s ease; 
-}
-
-/* Estilos para a navegação do cabeçalho */
 header nav a:hover {
-    background-color: #789495;
     transition: transform 0.3s ease; 
+    color: darkslategray;
 }
 
 /* Estilos para os containers */
@@ -53,38 +46,40 @@ header nav a:hover {
 /* Estilos para os links */
 a {
     text-decoration: none; /* Remove o sublinhado dos links */
-    font-family: 'Courier New', Courier, monospace;
+    font-family:;
 }
 
 /* Estilos para parágrafos */
 p {
-    color: #ffffff;
-    font-family: 'Courier New', Courier, monospace;
+    color:#2d6464;
+    font-family:  'Montserrat', sans-serif;
 }
 
 /* Estilos para h2 e h3 */
 h2 {
-    color:#ecf0f1;
-    font-family: 'Courier New', Courier, monospace;
+    color:#2d6464;
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     text-align:center;
 }
 
 h3{
-    color: #000101;
-    font-family: 'Courier New', Courier, monospace;
+    color:#2d6464;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Estilos para o logotipo */
 .logo-container img {
-    width: 1180px; 
-    height: auto; /*  proporção  */
+    width: 480px; 
+    height: 480px; /*  proporção  */
     border-radius: 60px;
+    position:relative;
+    top: 50%;
 }
 
 .logo-container img:hover {
     background-color: #789495;
-    transform: scale(1.01); 
+    transform: scale(1.30); 
     transition: transform 0.5s ease; 
 }
 
@@ -118,9 +113,9 @@ h3{
 
 .profile-text {
     flex: 1;
-    background-color: #92b4b4;
     padding: 20px;
     border-radius: 60px;
+    text-align: justify;
 }
 
 .profile-text:hover {
@@ -154,7 +149,6 @@ h3{
 }
 
 .contact-container:hover {
-    background-color:#2d6464;
     transform: scale(1.50); 
     transition: transform 0.3s ease; 
 }
@@ -174,13 +168,13 @@ h3{
 /* Estilos para a navegação */
 nav {
     text-align: center;
-    background-color: #2d6464;
-    padding: 10px 0;
+    background-color: #ffffff;
+    padding: 5px 0;
     margin-bottom: 2px;
 }
 
 nav a {
-    color: #fff;
+    color:#2d6464;
     text-decoration: none;
     margin: 0 10px;
 }
@@ -266,6 +260,5 @@ footer {
         height: 120px;
     }
 }
-@media (max-width: 768px) {
 
-}
+
