@@ -1,29 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Orçamento</title>
     <link rel="stylesheet" href="style.css">
     <style>
-    
-.logo {
-    width: 150px; /* Defina o tamanho desejado para a largura */
-    height: auto; /* Altura automática para manter a proporção */
-}
-
+        .logo {
+            width: 150px; /* Defina o tamanho desejado para a largura */
+            height: auto; /* Altura automática para manter a proporção */
+        }
+        .project-text {
+            max-width: 400px; /* Defina a largura máxima da caixa de formulário */
+            margin: 0 auto; /* Centraliza a caixa horizontalmente */
+            padding: 20px; /* Adiciona espaço interno para o conteúdo */
+            background-color: #f2f2f2; /* Cor de fundo da caixa */
+            border-radius: 10px; /* Borda arredondada */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2d6464;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #789495;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <!-- Adicione um link para levar diretamente ao primeiro projeto -->
+            <!-- Link para a página inicial com o logo -->
             <a href="/index.html"><img class="logo" src="/Imagens/OLIVE-oficial-tranparente-verde.png" alt="Logo"></a>
         </nav>
     </header>
     <h2>Orçamento</h2>
     <div class="project-text">
         <h3>Título do Projeto 1</h3>
+        <!-- Formulário para coletar dados -->
         <form>
             <input type="text" placeholder="Seu nome">
             <br>
