@@ -38,7 +38,7 @@ header nav a:hover {
 /* Estilos para os links */
 a {
     text-decoration: none; /* Remove o sublinhado dos links */
-    font-family:'Montserrat', sans-serif
+    font-family:'Montserrat', sans-serif;
 }
 
 /* Estilos para parágrafos */
