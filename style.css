@@ -318,13 +318,10 @@ h2 {
 }
 
 .nav-links {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 1080px;
+    margin: 1 auto;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: end;
 }
