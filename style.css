@@ -238,7 +238,7 @@ footer {
 .carousel {
     position: relative;
     max-width: 920px;
-    margin: 0 auto;
+    margin: 20px auto;
     overflow: hidden;
 }
 
@@ -268,11 +268,11 @@ footer {
 }
 
 .carousel button.prev {
-    left: 1px;
+    left: 10px;
 }
 
 .carousel button.next {
-    right: 1px;
+    right: 10px;
 }
 
 
