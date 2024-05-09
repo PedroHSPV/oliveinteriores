@@ -166,13 +166,13 @@ footer {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: #2d6464;
     color: #030303;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     z-index: 1000;
     font-family: 'Montserrat', sans-serif;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .orcamento-message img{
