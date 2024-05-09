@@ -162,6 +162,30 @@ footer {
     height: 40px;
 }
 
+.orcamento-message {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #2d6464;
+    color: #030303;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.orcamento-message img{
+    width: 40px;
+    height: 40px;
+}
+
+.orcamento-message p{
+    color:#030303;
+}
+
+
+
 /* Media Queries para Responsividade */
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
@@ -198,6 +222,7 @@ footer {
         width: 120px;
         height: 120px;
     }
+
 }
 
 /* Aqui estão os estilos adicionais que você forneceu */
@@ -281,9 +306,17 @@ h2 {
     background-color: #f5f5f5;
     margin: 0 auto; /* Centraliza horizontalmente */
     max-width: 800px; /* Limita a largura do texto */
-
+}
 .profile-text p {
     line-height: 1.5;
     color: #555;
 }
+
+.nav-links {
+    position: relative;
+    max-width: 1080px;
+    margin: 1 auto;
+    overflow: hidden;
+    justify-content: space-between;
 }
+

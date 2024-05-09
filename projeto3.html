@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
-.carousel {
+        .carousel {
             position: relative;
             max-width: 920px;
             margin: 20px auto;
@@ -116,6 +116,55 @@ function changeSlide(n) {
     slides[slideIndex].style.display = 'block';
 }
 
+let startX;
+        let currentTranslate = 0;
+
+        const carousel = document.getElementById('carousel');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        const carouselWidth = carouselItems[0].offsetWidth;
+
+        carousel.addEventListener('touchstart', touchStart);
+        carousel.addEventListener('touchmove', touchMove);
+        carousel.addEventListener('touchend', touchEnd);
+
+        function touchStart(event) {
+            startX = event.touches[0].clientX;
+        }
+
+        function touchMove(event) {
+            const currentX = event.touches[0].clientX;
+            const diffX = startX - currentX;
+            carousel.style.transform = `translateX(${currentTranslate - diffX}px)`;
+        }
+
+        function touchEnd(event) {
+            const currentX = event.changedTouches[0].clientX;
+            const diffX = startX - currentX;
+
+            if (diffX > 50) {
+                nextSlide();
+            } else if (diffX < -50) {
+                prevSlide();
+            } else {
+                carousel.style.transform = `translateX(${currentTranslate}px)`;
+            }
+        }
+
+        function prevSlide() {
+            currentTranslate += carouselWidth;
+            if (currentTranslate > 0) {
+                currentTranslate = -carouselWidth * (carouselItems.length - 1);
+            }
+            carousel.style.transform = `translateX(${currentTranslate}px)`;
+        }
+
+        function nextSlide() {
+            currentTranslate -= carouselWidth;
+            if (currentTranslate < -carouselWidth * (carouselItems.length - 1)) {
+                currentTranslate = 0;
+            }
+            carousel.style.transform = `translateX(${currentTranslate}px)`;
+        }
 // Exibir o primeiro slide ao carregar a página
 changeSlide(0);
 </script>

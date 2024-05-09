@@ -19,4 +19,3 @@ function changeSlide(n) {
 }
 
 // Exibir o primeiro slide ao carregar a página
-changeSlide(0);
