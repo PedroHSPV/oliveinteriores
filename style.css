@@ -69,7 +69,7 @@ h3{
 /* Estilos para os projetos */
 .project {
     overflow: hidden;
-    border-radius: 40px;
+    border-radius: 60px;
     width: 45%; /* Ajuste o tamanho para ocupar quase metade do espaço disponível, com margens */
     margin: 2.5%; /* Adiciona margens entre os projetos */
     float: left; /* Faz com que os projetos flutuem para a esquerda */
@@ -153,7 +153,7 @@ footer {
 }
 
 .contact-image img {
-    width: 100%;
+    width: 5000px;
     display: none;
 }
 
@@ -299,8 +299,8 @@ h2 {
 }
 
 .profile-image img {
-    width: 150px;
-    height: auto;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -318,10 +318,13 @@ h2 {
 }
 
 .nav-links {
-    position: relative;
-    max-width: 1080px;
-    margin: 1 auto;
-    overflow: hidden;
-    justify-content: space-between;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
