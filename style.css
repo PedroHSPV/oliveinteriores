@@ -164,6 +164,7 @@ footer {
 
 .orcamento-message {
     position: fixed;
+    height: 60px;
     bottom: 10px;
     right: 10px;
     color: #030303;
@@ -171,17 +172,21 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
     background-color: rgba(255, 255, 255, 0.8);
+    display: flex; /* Usar flexbox para alinhar conteúdo */
+    align-items: center; /* Alinhar itens verticalmente ao centro */
 }
 
-.orcamento-message img{
-    width: 40px;
-    height: 40px;
+.orcamento-message img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Adicionar margem à direita para separar a imagem do texto */
 }
 
-.orcamento-message p{
-    color:#030303;
+.orcamento-message p {
+    color: #2d6464;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; /* Remover margens padrão do parágrafo */
 }
 
 
