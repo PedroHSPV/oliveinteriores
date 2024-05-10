@@ -15,7 +15,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding-top: 80px; /* Altura */
-    background-color: #e2eced;
+    background-color: #fdfefe;
 }
 
 /* Estilos para o cabeçalho */
@@ -45,6 +45,7 @@ a {
 p {
     color:#2d6464;
     font-family:  'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 /* Estilos para h2 e h3 */
@@ -287,11 +288,13 @@ footer {
     font-family: Arial, sans-serif;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #e2eced;
 }
 
 h2 {
     text-align: center;
     color: #333;
+    font-weight: bold; /* Define o texto em negrito */
 }
 
 .profile-container {
@@ -338,7 +341,7 @@ h2 {
     color: #ffffff; /* Cor do texto */
     position: relative; /* Garante que o texto fique na parte superior da sobreposição */
     z-index: 1; /* Coloca o texto acima da sobreposição */
-
+    font-weight: bold;
 }
 @media (max-width: 600px) {
     .profile-text {
