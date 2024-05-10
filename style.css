@@ -149,7 +149,7 @@ footer {
     background-color:#000101;
     color:#e2eced;
     padding: 20px 0;
-    text-align:initial ;
+    text-align:center;
 }
 
 .contact-image img {
@@ -227,7 +227,10 @@ footer {
         width: 120px;
         height: 120px;
     }
+    .nav-links {
+        max-width: 1080px;
 
+    }
 }
 
 /* Aqui estão os estilos adicionais que você forneceu */
@@ -247,6 +250,7 @@ footer {
     transition: transform 0.5s ease;
     width: 100%; /* Garante que o carousel-container ocupe todo o width do carousel */
     margin-bottom: 20px; /* Ajuste conforme necessário */
+    object-fit: cover;
 }
 
 .carousel-container img {
@@ -303,18 +307,37 @@ h2 {
     height: 300px;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 .profile-text {
-    padding: 20px;
+    padding: 140px;
     border-radius: 10px;
-    background-color: #f5f5f5;
+    background-image: url("/Imagens/yasmin perfil.png");
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a caixa */
+    background-position: center; /* Centraliza a imagem de fundo */
     margin: 0 auto; /* Centraliza horizontalmente */
     max-width: 800px; /* Limita a largura do texto */
+    position: relative; /* Define a posição relativa para permitir a sobreposição */
 }
+
+/* Overlay escuro para realçar o texto */
+.profile-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com transparência (ajuste o valor alpha para controlar a opacidade) */
+    border-radius: 10px; /* Mesmo raio de borda que o elemento pai */
+}
+
 .profile-text p {
     line-height: 1.5;
-    color: #555;
+    color: #ffffff; /* Cor do texto */
+    position: relative; /* Garante que o texto fique na parte superior da sobreposição */
+    z-index: 1; /* Coloca o texto acima da sobreposição */
 }
 
 .nav-links {
