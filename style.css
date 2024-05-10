@@ -338,8 +338,14 @@ h2 {
     color: #ffffff; /* Cor do texto */
     position: relative; /* Garante que o texto fique na parte superior da sobreposição */
     z-index: 1; /* Coloca o texto acima da sobreposição */
-}
 
+}
+@media (max-width: 600px) {
+    .profile-text {
+        padding: 10px; /* Reduz o padding para dispositivos menores */
+        font-size: 14px; /* Tamanho de fonte menor para dispositivos móveis */
+    }
+}
 .nav-links {
     position: relative;
     max-width: 1080px;
