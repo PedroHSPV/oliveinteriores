@@ -33,6 +33,7 @@ header {
 header nav a:hover {
     transition: transform 0.3s ease; 
     color: darkslategray;
+
 }
 
 /* Estilos para os links */
@@ -45,7 +46,6 @@ a {
 p {
     color:#2d6464;
     font-family:  'Montserrat', sans-serif;
-    font-weight: bold;
 }
 
 /* Estilos para h2 e h3 */
@@ -87,11 +87,6 @@ h3{
 .project-content {
     display: flex;
     align-items: center;
-}
-
-.contact-container:hover {
-    transform: scale(1.50); 
-    transition: transform 0.3s ease; 
 }
 
 .project-image {
@@ -147,7 +142,7 @@ nav a {
 
 /* Estilos para o rodapé */
 footer {
-    background-color:#000101;
+    background-color:#030303;
     color:#e2eced;
     padding: 20px 0;
     text-align:center;
@@ -250,13 +245,13 @@ footer {
     display: flex;
     transition: transform 0.5s ease;
     width: 100%; /* Garante que o carousel-container ocupe todo o width do carousel */
-    margin-bottom: 20px; /* Ajuste conforme necessário */
+    margin-bottom: 150px; /* Ajuste conforme necessário */
     object-fit: cover;
 }
 
 .carousel-container img {
     width: 100%; /* Utiliza toda a largura disponível do contêiner */
-    max-height: 70vh; /* Limita a altura da imagem ao viewport height */
+    max-height: 90vh; /* Limita a altura da imagem ao viewport height */
     object-fit: contain; /* Ajusta a imagem para caber no contêiner sem distorcer */
 }
 
@@ -294,7 +289,6 @@ footer {
 h2 {
     text-align: center;
     color: #333;
-    font-weight: bold; /* Define o texto em negrito */
 }
 
 .profile-container {
@@ -341,7 +335,6 @@ h2 {
     color: #ffffff; /* Cor do texto */
     position: relative; /* Garante que o texto fique na parte superior da sobreposição */
     z-index: 1; /* Coloca o texto acima da sobreposição */
-    font-weight: bold;
 }
 @media (max-width: 600px) {
     .profile-text {
