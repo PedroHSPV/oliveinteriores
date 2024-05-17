@@ -8,6 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        .carousel-container {
+            position: relative;
+        }
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none; /* Evita que a marca d'água seja clicável */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -31,8 +43,6 @@
             <img src="/Imagens/Jantar_2.png" alt="Logo da Empresa">
             <img src="/Imagens/Hall De Entrada_1.png" alt="Logo da Empresa">
         </div>
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
     <div id="project" class="project">
         <h2>Studio V - Espaço de Beleza</h2>
@@ -102,7 +112,7 @@
                     Conte com a Olive Interiores para transformar a sua casa no seu verdadeiro lar!
             </div>
         </div>
-</div>
+    </div>
     <div id="contato" class="container">
         <h2>Contato</h2>
         <div class="contact-container">
@@ -135,29 +145,37 @@
             Contato: pedrohspv@gmail.com
         </p>
     </footer>
-
+    
     <script>
         let slideIndex = 0;
-
-        function changeSlide(n) {
-            const slides = document.querySelectorAll('.carousel-container img');
+        const slides = document.querySelectorAll('.carousel-container img');
+    
+        function showSlide(n) {
             slideIndex += n;
-
+    
             if (slideIndex >= slides.length) {
                 slideIndex = 0;
             } else if (slideIndex < 0) {
                 slideIndex = slides.length - 1;
             }
-
+    
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = 'none';
             }
-
+    
             slides[slideIndex].style.display = 'block';
         }
-
+    
+        function autoSlide() {
+            showSlide(1);
+            setTimeout(autoSlide, 2700); // Troque 2000 por milissegundos para definir o intervalo entre os slides
+        }
+    
         // Exibir o primeiro slide ao carregar a página
-        changeSlide(0);
+        showSlide(0);
+        // Iniciar a animação automática
+        autoSlide();
     </script>
-</body>
-</html>
+    </body>
+    </html>
+    
